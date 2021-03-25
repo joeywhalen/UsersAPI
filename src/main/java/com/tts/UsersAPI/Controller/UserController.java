@@ -1,6 +1,6 @@
 package com.tts.UsersAPI.Controller;
 
-import com.tts.UsersAPI.Model.User;
+import com.tts.UsersAPI.Model.Users;
 import com.tts.UsersAPI.Repository.UsersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,8 +15,8 @@ public class UserController {
   private UsersRepository usersRepository;
 
   @GetMapping("/users")
-  public List<User> getUsers() {
-    return (List<User>) UsersRepository.findAll();
+  public List<Users> getUsers() {
+    return (List<Users>) usersRepository.findAll();
   }
 
 }
